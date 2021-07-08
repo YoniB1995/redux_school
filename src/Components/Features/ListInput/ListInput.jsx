@@ -9,7 +9,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 })
 
 function ListInput(props) {
- const [item, setItem] = useState([]);
+    const arr = []
+ const [item, setItem] = useState(arr);
  const inputRef = useRef()
  
  function changeHandler(e) {
@@ -18,8 +19,7 @@ function ListInput(props) {
 }
 
  function addToListItem() {
-    item.push(inputRef.value)
-    //  item.push(inputRef.value)
+    //  arr.push(item)
  props.addItem(item);
  };
 

@@ -1,7 +1,7 @@
 import { ADD_ITEM,RESET_LIST , EDIT_LIST } from "../constants"
 
 export function addItem(item) {
- return { type: ADD_ITEM, payload:item }
+ return { type: ADD_ITEM, payload:[...item,item] }
 }
 
 export function resetList(reset) {
