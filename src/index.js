@@ -16,7 +16,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__()
  );
 
 
-const store = createStore(reducer, { list: { items: [] } }, 
+const store = createStore(reducer, {items: [] }, 
 enhancers);
 
 ReactDOM.render(

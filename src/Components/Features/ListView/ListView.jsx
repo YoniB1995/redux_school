@@ -6,16 +6,16 @@ import { connect } from 'react-redux';
 
 
 const mapStateToProps = (state) => {
- return { ...state, items: state.list.items }
+ return { ...state, items: state.items }
 
 }
 
 function ListView(props) {
  const listItems = props.items  ;
- const listItemsJSX = listItems.map(index=><ListItemText >{index}</ListItemText>)
+//  const listItemsJSX = listItems.map(index=><ListItemText >{index}</ListItemText>)
  return (
  <List>
- {listItemsJSX}
+ {listItems}
  </List>
  );
 }

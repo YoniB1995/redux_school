@@ -9,20 +9,23 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 })
 
 function ListInput(props) {
- const [item, setItem] = useState('');
+ const [item, setItem] = useState([]);
  const inputRef = useRef()
  
  function changeHandler(e) {
- setItem(e.target.value);
+ setItem(e.target.value)
+ 
 }
 
  function addToListItem() {
+    item.push(inputRef.value)
+    //  item.push(inputRef.value)
  props.addItem(item);
  };
 
  return (
  <div>
- <TextField onChange={changeHandler} />
+ <TextField onChange={changeHandler} ref={inputRef} />
  <Button onClick={addToListItem}>הוסף פריט לרשימה</Button>
  </div>
  );

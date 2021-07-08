@@ -1,11 +1,11 @@
 import {ADD_ITEM,RESET_LIST} from '../constants'
 
-function reducer(state = {list:{ items: [] }}, action) {
+function reducer(state = { items: [] }, action) {
  switch (action.type) {
  case ADD_ITEM:
- return  { list: {...state,items: state.list.items}};
+ return  {...state,items:action.payload};
  case RESET_LIST:
- return state = { list:{items:[]}};
+ return state = {items:""};
  default:
  return state ;
 }
