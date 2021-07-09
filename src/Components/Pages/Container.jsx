@@ -12,12 +12,13 @@ align-items: center;
 `
 
 function Container() {
- return (
- <BodyStyle>
- <ListView />
- <ListInput />
- <ResetBtn />
- </BodyStyle>
- );
+    return (
+        <BodyStyle>
+            <h1>Hello World</h1>
+            <ListView />
+            <ListInput />
+            <ResetBtn />
+        </BodyStyle>
+    );
 }
 export default Container
